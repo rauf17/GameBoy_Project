@@ -20,7 +20,6 @@ string Player::getName()
     Font font2;
     Text inputText;
     Text promptText;
-    Text DevelopersText;
 
     if (!font.loadFromFile("BlazeCircuitRegular-xRvxj.ttf")) 
     {
@@ -58,15 +57,6 @@ string Player::getName()
     inputText.setOutlineColor(Color::Magenta);
     inputText.setOutlineThickness(5);
     inputText.setPosition(650, 650);
-
-    // Set up Developers text
-    DevelopersText.setFont(font);
-    DevelopersText.setString("Developers :\n\nAbdul Rauf (23I-0591)\tAbdul Ghufran (23I-0576)\tShayan Asad  (23I-0518)");
-    DevelopersText.setCharacterSize(20);
-    DevelopersText.setFillColor(Color::Black);
-    DevelopersText.setOutlineColor(Color::Magenta);
-    DevelopersText.setOutlineThickness(5);
-    DevelopersText.setPosition(10, 700);
 
     // Load and set background texture
     if (!backgroundTexture.loadFromFile("GameBoy-bg.jpg")) 
@@ -118,7 +108,6 @@ string Player::getName()
 
         window.draw(promptText);
         window.draw(inputText);
-        window.draw(DevelopersText);
         window.display();
     }
 
