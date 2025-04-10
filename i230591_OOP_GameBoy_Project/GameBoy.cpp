@@ -109,7 +109,7 @@ void GameBoy::run()
 
 int main() 
 {
-   {
+    {
         RenderWindow splashWindow(VideoMode(1024, 1200), "GameBoy", Style::Close);
         splashWindow.setFramerateLimit(60);
 
@@ -129,19 +129,35 @@ int main()
         );
 
         Clock splashClock;
+        const float fadeDuration = 3.f; // 3 seconds for each fade phase
 
-        while (splashClock.getElapsedTime().asSeconds() < 3.f)
+        while (splashWindow.isOpen())
         {
-            float alpha = 255 * (1 - splashClock.getElapsedTime().asSeconds() / 3.f);
+            float elapsed = splashClock.getElapsedTime().asSeconds();
+            float alpha = 255;
+
+            if (elapsed < fadeDuration) // Fade In (0s - 3s)
+            {
+                alpha = 255 * (elapsed / fadeDuration);
+            }
+            else if (elapsed < 2 * fadeDuration) // Fade Out (3s - 6s)
+            {
+                alpha = 255 * (1 - ((elapsed - fadeDuration) / fadeDuration));
+            }
+            else // After 6s, close splash
+            {
+                splashWindow.close();
+                break;
+            }
+
             splashSprite.setColor(Color(255, 255, 255, static_cast<Uint8>(alpha)));
 
             splashWindow.clear();
             splashWindow.draw(splashSprite);
             splashWindow.display();
         }
-
-        splashWindow.close(); // Close splash before proceeding
     }
+
 
     string playerName;
     Player player1(playerName);
