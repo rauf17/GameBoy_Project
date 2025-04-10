@@ -5,6 +5,7 @@
 using namespace std;
 using namespace sf;
 
+//player class
 
 Player::Player(const string& playerName) : name(playerName), score(0) {}
 
