@@ -60,7 +60,7 @@ string Player::getName()
     inputText.setPosition(650, 650);
 
     // Load and set background texture
-    if (!backgroundTexture.loadFromFile("GameBoy-bg.jpg")) 
+    if (!backgroundTexture.loadFromFile("Textures/GameBoy-bg.jpg")) 
     {
         cout << "Error loading background image!" << endl;
         exit(-1);

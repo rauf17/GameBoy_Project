@@ -1,8 +1,7 @@
 #include "GameBoy.h"
 #include "Game.h"
 
-GameBoy::GameBoy(const string& playerName)
-    : window(VideoMode(1020, 800), "Game Menu"),
+GameBoy::GameBoy(const string& playerName) : window(VideoMode(1020, 800), "Game Menu"),
     menu(window, &leaderboard),
     player(playerName),
     leaderboard()
@@ -110,6 +109,40 @@ void GameBoy::run()
 
 int main() 
 {
+   {
+        RenderWindow splashWindow(VideoMode(1024, 1200), "GameBoy", Style::Close);
+        splashWindow.setFramerateLimit(60);
+
+        Texture splashTexture;
+        Sprite splashSprite;
+
+        if (!splashTexture.loadFromFile("Textures/bg_mm.png")) // Your splash image
+        {
+            cout << "Failed to load splash image!" << endl;
+            exit(-1);
+        }
+
+        splashSprite.setTexture(splashTexture);
+        splashSprite.setScale(
+            splashWindow.getSize().x / static_cast<float>(splashTexture.getSize().x),
+            splashWindow.getSize().y / static_cast<float>(splashTexture.getSize().y)
+        );
+
+        Clock splashClock;
+
+        while (splashClock.getElapsedTime().asSeconds() < 3.f)
+        {
+            float alpha = 255 * (1 - splashClock.getElapsedTime().asSeconds() / 3.f);
+            splashSprite.setColor(Color(255, 255, 255, static_cast<Uint8>(alpha)));
+
+            splashWindow.clear();
+            splashWindow.draw(splashSprite);
+            splashWindow.display();
+        }
+
+        splashWindow.close(); // Close splash before proceeding
+    }
+
     string playerName;
     Player player1(playerName);
     player1.getName();

@@ -130,7 +130,7 @@ MainMenu::MainMenu(RenderWindow& win, Leaderboard* lb) : window(win), leaderboar
 
 
     // Load and set background texture
-    if (!backgroundTexture.loadFromFile("GameBoy-bg.jpg"))
+    if (!backgroundTexture.loadFromFile("Textures/GameBoy-bg.jpg"))
     {
         cout << "Error loading background image!" << endl;
         exit(-1);
