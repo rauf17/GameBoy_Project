@@ -24,14 +24,11 @@ Welcome to the **Classic GameBoy Project** – a retro-inspired gaming platform 
    ```
 
 2. 📂 Navigate to the executable directory:
-   - Navigate to x64 and run i230591_OOP_GameBoy_Project.exe to play the game!
+   - Navigate to the `i230591_OOP_GameBoy_Project` folder and find the `i230591_OOP_GameBoy_Project.exe` file to play the game!
    
 
 3. ▶️ Run the game:
-   - Click on i230591_OOP_GameBoy_Project.exe.
-
-
-> ⚠️ Make sure all SFML `.dll` files and assets (like music and textures) are in the same directory as the `.exe`.
+   - Click on `i230591_OOP_GameBoy_Project.exe`.
 
 ---
 
