@@ -130,6 +130,15 @@ For feedback, bugs, or questions, feel free to reach out:
 
 ---
 
+## License
+
+© 2025, **Abdul Rauf**  
+
+This project is Distributed under the Creative Commons Attribution-NonCommercial 4.0 International Public License (CC BY-NC 4.0).
+See the `LICENSE` file in the repository for the license text.
+
+---
+
 ## 📸 Gameplay
 
 ![image](https://github.com/user-attachments/assets/48925ad1-44fb-4832-9d74-d97064cffccd)
