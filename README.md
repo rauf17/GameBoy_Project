@@ -20,11 +20,11 @@ Welcome to the **Classic GameBoy Project** – a retro-inspired gaming platform 
 
 1. 📥 Clone the repository:
    ```bash
-   git clone https://github.com/rauf17/i230591_OOP_GameBoy_Project.git
+   git clone https://github.com/rauf17/GameBoy_Project.git
    ```
 
 2. 📂 Navigate to the executable directory:
-   - Navigate to the `i230591_OOP_GameBoy_Project` folder and find the `i230591_OOP_GameBoy_Project.exe` file to play the game!
+   - Navigate to the `GameBoy_Project` folder and find the `i230591_OOP_GameBoy_Project.exe` file to play the game!
    
 
 3. ▶️ Run the game:
