@@ -135,6 +135,7 @@ For feedback, bugs, or questions, feel free to reach out:
 © 2025, **Abdul Rauf**  
 
 This project is Distributed under the Creative Commons Attribution-NonCommercial 4.0 International Public License (CC BY-NC 4.0).
+
 See the `LICENSE` file in the repository for the license text.
 
 ---
